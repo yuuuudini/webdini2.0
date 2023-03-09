@@ -1,0 +1,14 @@
+.StartPageFontHeader {
+    font-family: 'InconsolataExtraLight', serif ;
+    color: white;
+    font-size: 3rem;
+    text-decoration: underline;
+    text-decoration-thickness: 0.1rem;
+    text-underline-offset: 0.5rem;
+}
+
+.StartPageFont {
+    font-family: 'InconsolataExtraLight', serif ;
+    color: white;
+    font-size: 3rem;
+}
