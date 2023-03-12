@@ -7,18 +7,17 @@ export default function Home() {
             style={{
                 height: "100vh",
                 width: "100vw",
-                backgroundColor: "#141414",
                 display: 'flex',
                 flexWrap: 'wrap',
                 justifyContent: 'center',
                 alignItems:'center',
             }}
         >
-                <div style={{marginLeft:'10rem', marginRight:'10rem', display:'flex', flexDirection:'column', justifyContent:'center', alignItems:'center'}}>
+                <div className={styles.text} style={{marginRight:'10rem', marginLeft:'10rem',display:'flex', flexDirection:'column', justifyContent:'center', alignItems:'center'}}>
                     <p className={styles.StartPageFontHeader}>Welcome to dini's Portfolio</p>
-                    <Button className={styles.StartPageFont} type={'link'}>Click here to get started.</Button>
+                    <a className={styles.StartPageFont} href={'about'}>Click here to get started.</a>
                 </div>
-                <div style={{marginTop:'10rem',marginLeft:'10rem', marginRight:'10rem',display:'flex', flexDirection:'column', justifyContent:'center', alignItems:'center'}}>
+                <div className={styles.image} style={{display:'flex', flexDirection:'column', justifyContent:'center', alignItems:'center'}}>
                     <Card style={{paddingBottom:'20px', borderRadius: 1, transform: "rotate(3deg)"}}>
                         <div style={{
                             height: 450,
@@ -28,7 +27,7 @@ export default function Home() {
                             <Image src={"me01.jpg"} preview={false}/>
                         </div>
                     </Card>
-                    <p className={styles.StartPageFont}>This is me.</p>
+                    <p className={styles.StartPageFont}>This is me</p>
                 </div>
         </div>
     );

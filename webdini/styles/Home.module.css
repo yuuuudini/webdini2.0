@@ -11,4 +11,42 @@
     font-family: 'InconsolataExtraLight', serif ;
     color: white;
     font-size: 3rem;
+    text-decoration: none;
+}
+
+@keyframes slideIn {
+    0% {
+        opacity: 0;
+        transform: translateY(300px);
+    }
+    20%{
+        opacity: 0;
+        transform: translateY(300px);
+    }
+
+    100%{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+
+}
+
+.image{
+    animation: slideIn;
+    animation-duration: 3s;
+}
+
+@keyframes fadeIn {
+    0%{
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+
+}
+
+.text{
+    animation: fadeIn;
+    animation-duration: 3s;
 }
