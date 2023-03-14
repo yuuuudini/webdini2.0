@@ -6,9 +6,9 @@ export default function HamburgerIcon(){
 
     return (
         <div className={styles.container} onClick={() => setHamburgerView(!hamburgerView)}>
-            <div className={hamburgerView ? styles.bar1 : styles.bar11}></div>
-            <div className={hamburgerView ? styles.bar2 : styles.bar21}></div>
-            <div className={hamburgerView ? styles.bar3 : styles.bar31}></div>
+            <div className={hamburgerView ? styles.bar1 : styles.bar1after}></div>
+            <div className={hamburgerView ? styles.bar2 : styles.bar2after}></div>
+            <div className={hamburgerView ? styles.bar3 : styles.bar3after}></div>
         </div>
     )
 }

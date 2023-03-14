@@ -1,11 +1,11 @@
-.StartPageFontHeader {
-    font-family: 'InconsolataExtraLight', serif ;
-    color: white;
-    font-size: 3rem;
-    text-decoration: underline;
-    text-decoration-thickness: 0.1rem;
-    text-underline-offset: 0.5rem;
+.container {
+    margin-top: 5vh;
+    display: flex;
+    flexWrap: wrap;
+    justifyContent: center;
+    alignItems: center
 }
+
 
 .Font{
     font-family: 'InconsolataExtraLight', serif ;
@@ -84,7 +84,12 @@
 }
 
 .image{
-    animation: slideIn 1s cubic-bezier(0.49, 1.18, 0.51, 1.51)
+    animation: slideIn 1s cubic-bezier(0.49, 1.18, 0.51, 1.51);
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 @keyframes fadeIn {
