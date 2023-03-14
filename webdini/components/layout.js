@@ -1,35 +1,13 @@
-import { ConfigProvider, theme, Layout } from "antd";
-import { useState } from "react";
-import Navbar from "./navbar";
+import Navbar from "./Navbar/navbar";
 
-const {Header, Content, Footer, Sider} = Layout
 
-export default function MyLayout(props) {
-  const [isLightMode, setIsLightMode] = useState(false);
-  const pageProps = props.pageProps
-  let color = isLightMode ? "#FFFFFF" : "#141414";
+export default function MyLayout({children}) {
 
-  return (
-    <ConfigProvider
-      theme={{
-        algorithm: isLightMode ? theme.defaultAlgorithm : theme.darkAlgorithm,
-        token: { colorPrimary: "#5300b3" },
-        components: {
-          Header: {
-            colorPrimaryBg: color,
-          },
-        },
-      }}
-    >
-      <Layout style={{ height: "100vh", margin: 0 }}>
-        <Header style={{ backgroundColor: color }}>
-          <Navbar onChange={() => setIsLightMode(!isLightMode)} />
-        </Header>
-        <Content style={{ backgroundColor: color }}>
-          {pageProps}
-        </Content>
-        <Footer style={{ backgroundColor: color }}></Footer>
-      </Layout>
-    </ConfigProvider>
-  );
+    return (
+        <>
+            <main style={{marginTop: '10px'}}>
+                {children}
+            </main>
+        </>
+    );
 }

@@ -7,21 +7,73 @@
     text-underline-offset: 0.5rem;
 }
 
-.StartPageFont {
+.Font{
     font-family: 'InconsolataExtraLight', serif ;
     color: white;
     font-size: 3rem;
     text-decoration: none;
 }
 
+.Font::before{
+    content: '<';
+    opacity: 0;
+}
+
+.Font:hover::before{
+    opacity: 1;
+    transition: opacity 0.5s;
+}
+
+.Font::after{
+    content: '/>';
+    opacity: 0;
+}
+
+.Font:hover::after{
+    opacity: 1;
+    transition: opacity 0.5s 0.1s;
+}
+
+
+
+.ThisIsMe {
+    font-family: 'InconsolataExtraLight', serif ;
+    color: white;
+    font-size: 3rem;
+    text-decoration: none;
+    line-height: 100px;
+    width: 650px;
+    text-align: center;
+    vertical-align: bottom;
+}
+
+.ThisIsMe::after{
+    content:'|';
+    line-height: 100px;
+    text-align: center;
+    vertical-align: text-before-edge;
+    opacity: 0;
+    animation: thisisme 1s infinite steps(2, jump-none);
+}
+
+
+@keyframes thisisme {
+    0%{
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
 @keyframes slideIn {
     0% {
         opacity: 0;
-        transform: translateY(300px);
+        transform: translateY(75px);
     }
     20%{
         opacity: 0;
-        transform: translateY(300px);
+        transform: translateY(75px);
     }
 
     100%{
@@ -32,8 +84,7 @@
 }
 
 .image{
-    animation: slideIn;
-    animation-duration: 3s;
+    animation: slideIn 1s cubic-bezier(0.49, 1.18, 0.51, 1.51)
 }
 
 @keyframes fadeIn {
@@ -48,5 +99,6 @@
 
 .text{
     animation: fadeIn;
-    animation-duration: 3s;
+    animation-duration: 1.5s;
 }
+
