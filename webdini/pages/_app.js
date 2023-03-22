@@ -1,13 +1,7 @@
 import "@/styles/globals.css";
-import MyLayout from "@/components/layouts/layout";
-import Navbar from "@/components/Navbar/Navbar";
-import Layout from "@/components/layouts/layout";
+import Layout from '@/components/Layout/layout'
 
-
-const MyApp = ({Component, pageProps})  => {
-
-    const getLayout = Component.getLayout || ((page) => <Layout>{page}</Layout>)
-
-    return getLayout(<Component {...pageProps} />)
+const MyApp = ({Component, pageProps, router}) => {
+    return (<Layout><Component {...pageProps}/></Layout>)
 }
 export default MyApp

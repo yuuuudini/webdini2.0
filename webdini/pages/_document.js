@@ -6,7 +6,7 @@ export default class Document extends NextDocument {
             <Html style={{background: "#141414"}} lang="en">
                 <Head>
                 </Head>
-                <body style={{overflowX: 'hidden'}}>
+                <body>
                 <Main/>
                 <NextScript/>
                 </body>

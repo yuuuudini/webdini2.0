@@ -1,109 +1,46 @@
-.container {
-    margin-top: 5vh;
+.wrapper {
     display: flex;
-    flexWrap: wrap;
-    justifyContent: center;
-    alignItems: center
-}
-
-
-.Font{
-    font-family: 'InconsolataExtraLight', serif ;
-    color: white;
-    font-size: 3rem;
-    text-decoration: none;
-}
-
-.Font::before{
-    content: '<';
-    opacity: 0;
-}
-
-.Font:hover::before{
-    opacity: 1;
-    transition: opacity 0.5s;
-}
-
-.Font::after{
-    content: '/>';
-    opacity: 0;
-}
-
-.Font:hover::after{
-    opacity: 1;
-    transition: opacity 0.5s 0.1s;
-}
-
-
-
-.ThisIsMe {
-    font-family: 'InconsolataExtraLight', serif ;
-    color: white;
-    font-size: 3rem;
-    text-decoration: none;
-    line-height: 100px;
-    width: 650px;
-    text-align: center;
-    vertical-align: bottom;
-}
-
-.ThisIsMe::after{
-    content:'|';
-    line-height: 100px;
-    text-align: center;
-    vertical-align: text-before-edge;
-    opacity: 0;
-    animation: thisisme 1s infinite steps(2, jump-none);
-}
-
-
-@keyframes thisisme {
-    0%{
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
-}
-
-@keyframes slideIn {
-    0% {
-        opacity: 0;
-        transform: translateY(75px);
-    }
-    20%{
-        opacity: 0;
-        transform: translateY(75px);
-    }
-
-    100%{
-        opacity: 1;
-        transform: translateY(0px);
-    }
-
-}
-
-.image{
-    animation: slideIn 1s cubic-bezier(0.49, 1.18, 0.51, 1.51);
-    margin-top: 100px;
-    display: flex;
-    flex-direction: column;
+    flex-flow: column;
     justify-content: center;
     align-items: center;
 }
 
-@keyframes fadeIn {
-    0%{
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
-
+.line1, .line2, .line3 {
+    overflow: hidden;
+    white-space: nowrap;
 }
 
-.text{
-    animation: fadeIn;
-    animation-duration: 1.5s;
+.line1 {
+    animation: typing1 3s steps(28) normal both, blink .7s steps(2, jump-none) 3;
 }
 
+.line2 {
+    animation: typing2 2s steps(26) normal both, blink .7s steps(2, jump-none) 2;
+    animation-delay: 3s;
+}
+
+.line3 {
+    animation: typing3 2s steps(30) normal both, blink .7s steps(2, jump-none) infinite;
+    animation-delay: 5s;
+}
+
+@keyframes typing1 {
+    from {width: 0;}
+    to {width: 28rem;}
+}
+
+
+@keyframes typing2 {
+    from {width: 0;}
+    to {width: 26rem;}
+}
+
+@keyframes typing3 {
+    from {width: 0;}
+    to {width: 30rem;}
+}
+
+@keyframes blink {
+    0% {border-right: 3px solid transparent}
+    100% {border-right: 3px solid}
+}
